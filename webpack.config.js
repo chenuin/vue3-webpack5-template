@@ -24,6 +24,8 @@ module.exports = {
     resolve: {
         alias: {
             components: path.resolve(__dirname, 'src/components/'),
+            enums: path.resolve(__dirname, 'src/enums/'),
+            maps: path.resolve(__dirname, 'src/maps/'),
             vue: 'vue/dist/vue.esm-bundler.js',
         },
     },
