@@ -1,5 +1,6 @@
 import { mount } from '@vue/test-utils';
 import { expect } from 'expect';
+import { ref } from 'vue';
 
 const Counter = {
     template: `
@@ -7,17 +8,18 @@ const Counter = {
             Increment
         </button>
     `,
-    data() {
-        return {
-            count: 0
-        };
-    },
     emits: ['increment'],
-    methods: {
-        handleClick() {
-            this.count += 1
-            this.$emit('increment', this.count)
-        },
+    setup(props, {emit}) {
+        const count = ref(0);
+        const handleClick = () => {
+            count.value += 1;
+            emit('increment', count.value)
+        };
+
+        return {
+            count,
+            handleClick,
+        };
     },
 };
 
