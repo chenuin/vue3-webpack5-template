@@ -6,8 +6,9 @@
   "scripts": {
     "watch": "webpack --mode=development --watch",
     "build": "webpack --mode=production",
-    "test": "npx mocha",
-    "eslint": "npx eslint --ext .js,.vue src"
+    "test": "npx vitest",
+    "eslint": "npx eslint --ext .js,.vue src",
+    "preview": "npx vite preview"
   },
   "repository": {
     "type": "git",
@@ -20,15 +21,21 @@
     "@babel/plugin-transform-runtime": "^7.16.10",
     "@babel/preset-env": "^7.16.11",
     "@babel/register": "^7.16.9",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@vitest/ui": "^0.27.1",
     "@vue/compiler-sfc": "^3.2.37",
+    "@vue/test-utils": "^2.2.7",
     "chai": "^4.3.4",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.1",
     "eslint": "^8.20.0",
     "eslint-plugin-vue": "^9.2.0",
     "html-webpack-plugin": "^5.5.0",
+    "jsdom": "^21.0.0",
     "mocha": "^9.2.0",
     "style-loader": "^3.3.1",
+    "vite": "^4.0.4",
+    "vitest": "^0.27.1",
     "vue-loader": "^16.8.3",
     "webpack": "^5.73.0",
     "webpack-cli": "^4.10.0"
