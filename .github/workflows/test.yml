@@ -1,0 +1,19 @@
+name: Test
+
+on:
+  push:
+    branches: main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - name: Before srcipt
+        run: npm install
+
+      - name: Test
+        run: npm run test -- --run
